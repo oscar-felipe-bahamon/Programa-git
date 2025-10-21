@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - Sistema de Inventario</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="dashboard-header">
+    <img src="img/logo.png" alt="Logo" class="logo-left">
+    <nav>
+      <button class="nav-btn">Dashboard</button>
+      <button class="nav-btn">Productos</button>
+      <button class="nav-btn">Categorías</button>
+    </nav>
+  </header>
+
+  <main class="dashboard-main">
+    <section class="cards-container">
+      <div class="card">
+        <h3>Total Productos</h3>
+        <p class="card-number">$ 45.500.000 COP</p>
+      </div>
+      <div class="card">
+        <h3>Valor Total</h3>
+        <p class="card-number">$ 120.300.000 COP</p>
+      </div>
+      <div class="card">
+        <h3>Stock Bajo</h3>
+        <p class="card-number amarillo">12 productos</p>
+      </div>
+      <div class="card">
+        <h3>Agotados</h3>
+        <p class="card-number rojo">8 productos</p>
+      </div>
+    </section>
+
+    <section class="alertas-container">
+      <h3>Alertas Activas</h3>
+      <table>
+        <tr>
+          <th>Marca</th>
+          <th>Precio</th>
+          <th>Stock</th>
+        </tr>
+        <tr>
+          <td>Samsung</td>
+          <td>$2.100.000</td>
+          <td>15</td>
+        </tr>
+        <tr>
+          <td>Apple</td>
+          <td>$4.300.000</td>
+          <td>8</td>
+        </tr>
+        <tr>
+          <td>Xiaomi</td>
+          <td>$1.200.000</td>
+          <td>20</td>
+        </tr>
+        <tr>
+          <td>Motorola</td>
+          <td>$980.000</td>
+          <td>5</td>
+        </tr>
+      </table>
+    </section>
+  </main>
+
+  <footer class="dashboard-footer">
+    <div class="colaborador-info">
+      <div class="avatar">FQ</div>
+      <div>
+        <p><strong>Fabio Quevedo</strong></p>
+        <p>Rol: Colaborador</p>
+      </div>
+    </div>
+    <button class="logout-btn">Cerrar sesión</button>
+  </footer>
+
+  <script>
+    document.querySelector('.logout-btn').addEventListener('click', () => {
+      window.location.href = "login.html";
+    });
+  </script>
+</body>
+</html>

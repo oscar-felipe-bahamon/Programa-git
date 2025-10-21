@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inicio de Sesión - Sistema Inventario</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="login-body">
+  <main class="login-container">
+    <img src="img/logo.png" alt="Logo" class="logo">
+    <h2>Inicia Sesión</h2>
+
+    <label for="rol">Selecciona tu rol:</label>
+    <select id="rol">
+      <option value="">Seleccione...</option>
+      <option value="admin">Administrador</option>
+      <option value="colaborador">Colaborador</option>
+    </select>
+
+    <input type="email" id="email" placeholder="Correo electrónico" aria-label="Correo electrónico">
+    <input type="password" id="password" placeholder="Contraseña" aria-label="Contraseña">
+    <button id="loginBtn">Iniciar sesión</button>
+
+    <footer>
+      ¿Necesitas ayuda? Si no cuentas con una cuenta activa, contacta al administrador del sistema.
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById('loginBtn').addEventListener('click', () => {
+      const email = document.getElementById('email').value.trim();
+      const password = document.getElementById('password').value.trim();
+
+      if (email && password) {
+        window.location.href = "dashboard.html";
+      } else {
+        alert("Por favor ingresa tu correo y contraseña.");
+      }
+    });
+  </script>
+</body>
+</html>
